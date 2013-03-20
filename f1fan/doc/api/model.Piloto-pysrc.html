@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>model.Piloto</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="model-module.html">Package&nbsp;model</a> ::
+        Module&nbsp;Piloto
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="model.Piloto-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="model.Piloto-module.html">Module model.Piloto</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">datetime</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module model.util=model.util-module.html"><a title="model.util" class="py-name" href="#" onclick="return doclink('link-0', 'util', 'link-0');">util</a></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="Piloto"></a><div id="Piloto-def"><a name="L8"></a><tt class="py-lineno">  8</tt> <a class="py-toggle" href="#" id="Piloto-toggle" onclick="return toggle('Piloto');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="model.Piloto.Piloto-class.html">Piloto</a><tt class="py-op">(</tt><tt class="py-base-class">util</tt><tt class="py-op">.</tt><tt class="py-base-class">Observable</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Piloto-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Piloto-expanded"><a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">    Los objetos de la clase Piloto se utilizan para representar a los</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    distintos pilotos que participan en la competici&#243;n.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">    Algunos de sus datos relevantes son el nombre y la fecha de</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">    nacimiento. Opcionalmente puede estar disponible una foto, para la</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">    cual se indica un uri que permita recuperarla la imagen.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">    Durante una temporada, un piloto puede cambiar de equipo, por lo</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">    que se mantiene la referencia a todos los equipos a los que estuvo</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">    vinculado, junto con la fecha de inicio de la relaci&#243;n.</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="Piloto.__init__"></a><div id="Piloto.__init__-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="Piloto.__init__-toggle" onclick="return toggle('Piloto.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Piloto.Piloto-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">nombre</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Piloto.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Piloto.__init__-expanded"><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">        Constructor de la clase.</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">        @param nombre: El nombre del piloto.</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">        @type nombre: String</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt id="link-1" class="py-name"><a title="model.util" class="py-name" href="#" onclick="return doclink('link-1', 'util', 'link-0');">util</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Class model.util.Observable=model.util.Observable-class.html,Class script-util_py_.Observable=script-util_py_.Observable-class.html"><a title="model.util.Observable
+script-util_py_.Observable" class="py-name" href="#" onclick="return doclink('link-2', 'Observable', 'link-2');">Observable</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method model.Equipo.Equipo.__init__()=model.Equipo.Equipo-class.html#__init__,Method model.GP.GP.__init__()=model.GP.GP-class.html#__init__,Method model.Piloto.Piloto.__init__()=model.Piloto.Piloto-class.html#__init__,Method model.Temporada.Temporada.__init__()=model.Temporada.Temporada-class.html#__init__,Method model.core.Equipo.__init__()=model.core.Equipo-class.html#__init__,Method model.core.GP.__init__()=model.core.GP-class.html#__init__,Method model.core.Piloto.__init__()=model.core.Piloto-class.html#__init__,Method model.core.Temporada.__init__()=model.core.Temporada-class.html#__init__,Method model.util.BussinessRuleError.__init__()=model.util.BussinessRuleError-class.html#__init__,Method model.util.Forbidden.__init__()=model.util.Forbidden-class.html#__init__,Method model.util.Observable.__init__()=model.util.Observable-class.html#__init__,Method script-Equipo_py_.Equipo.__init__()=script-Equipo_py_.Equipo-class.html#__init__,Method script-Piloto_py_.Piloto.__init__()=script-Piloto_py_.Piloto-class.html#__init__,Method script-Temporada_py_.Temporada.__init__()=script-Temporada_py_.Temporada-class.html#__init__,Method script-core_py_.Equipo.__init__()=script-core_py_.Equipo-class.html#__init__,Method script-core_py_.GP.__init__()=script-core_py_.GP-class.html#__init__,Method script-core_py_.Piloto.__init__()=script-core_py_.Piloto-class.html#__init__,Method script-core_py_.Temporada.__init__()=script-core_py_.Temporada-class.html#__init__,Method script-util_py_.Observable.__init__()=script-util_py_.Observable-class.html#__init__"><a title="model.Equipo.Equipo.__init__
+model.GP.GP.__init__
+model.Piloto.Piloto.__init__
+model.Temporada.Temporada.__init__
+model.core.Equipo.__init__
+model.core.GP.__init__
+model.core.Piloto.__init__
+model.core.Temporada.__init__
+model.util.BussinessRuleError.__init__
+model.util.Forbidden.__init__
+model.util.Observable.__init__
+script-Equipo_py_.Equipo.__init__
+script-Piloto_py_.Piloto.__init__
+script-Temporada_py_.Temporada.__init__
+script-core_py_.Equipo.__init__
+script-core_py_.GP.__init__
+script-core_py_.Piloto.__init__
+script-core_py_.Temporada.__init__
+script-util_py_.Observable.__init__" class="py-name" href="#" onclick="return doclink('link-3', '__init__', 'link-3');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__nombre</tt> <tt class="py-op">=</tt> <tt id="link-4" class="py-name" targets="Variable model.Equipo.Equipo.nombre=model.Equipo.Equipo-class.html#nombre,Variable model.GP.GP.nombre=model.GP.GP-class.html#nombre,Variable model.Piloto.Piloto.nombre=model.Piloto.Piloto-class.html#nombre,Variable model.Temporada.Temporada.nombre=model.Temporada.Temporada-class.html#nombre,Variable model.core.Equipo.nombre=model.core.Equipo-class.html#nombre,Variable model.core.GP.nombre=model.core.GP-class.html#nombre,Variable model.core.Piloto.nombre=model.core.Piloto-class.html#nombre,Variable model.core.Temporada.nombre=model.core.Temporada-class.html#nombre,Variable script-Equipo_py_.Equipo.nombre=script-Equipo_py_.Equipo-class.html#nombre,Variable script-Piloto_py_.Piloto.nombre=script-Piloto_py_.Piloto-class.html#nombre,Variable script-Temporada_py_.Temporada.nombre=script-Temporada_py_.Temporada-class.html#nombre,Variable script-core_py_.Equipo.nombre=script-core_py_.Equipo-class.html#nombre,Variable script-core_py_.GP.nombre=script-core_py_.GP-class.html#nombre,Variable script-core_py_.Piloto.nombre=script-core_py_.Piloto-class.html#nombre,Variable script-core_py_.Temporada.nombre=script-core_py_.Temporada-class.html#nombre"><a title="model.Equipo.Equipo.nombre
+model.GP.GP.nombre
+model.Piloto.Piloto.nombre
+model.Temporada.Temporada.nombre
+model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre
+script-Equipo_py_.Equipo.nombre
+script-Piloto_py_.Piloto.nombre
+script-Temporada_py_.Temporada.nombre
+script-core_py_.Equipo.nombre
+script-core_py_.GP.nombre
+script-core_py_.Piloto.nombre
+script-core_py_.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-4', 'nombre', 'link-4');">nombre</a></tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__nacimiento</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__foto</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">     </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="Piloto.nuevo_equipo"></a><div id="Piloto.nuevo_equipo-def"><a name="L38"></a><tt class="py-lineno"> 38</tt> <a class="py-toggle" href="#" id="Piloto.nuevo_equipo-toggle" onclick="return toggle('Piloto.nuevo_equipo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Piloto.Piloto-class.html#nuevo_equipo">nuevo_equipo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">equipo</tt><tt class="py-op">,</tt> <tt class="py-param">desde</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Piloto.nuevo_equipo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Piloto.nuevo_equipo-expanded"><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">        Vincula al piloto a un nuevo equipo a partir de la fecha</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">        indicada.</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-docstring">        @param equipo: El nuevo equipo del piloto.</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-docstring">        @type equipo: L{Equipo}</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-docstring">        @param desde: Fecha de inicio de la relaci&#243;n.</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">        @type desde: datetime.date</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">desde</tt> <tt class="py-op">&lt;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">.</tt><tt class="py-name">insert</tt><tt class="py-op">(</tt><tt class="py-name">i</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-name">desde</tt><tt class="py-op">,</tt> <tt class="py-name">equipo</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method model.util.Observable.notificar()=model.util.Observable-class.html#notificar,Method model.util.Observable.notificar()=model.util.Observable-class.html#notificar,Method script-util_py_.Observable.notificar()=script-util_py_.Observable-class.html#notificar"><a title="model.util.Observable.notificar
+model.util.Observable.notificar
+script-util_py_.Observable.notificar" class="py-name" href="#" onclick="return doclink('link-5', 'notificar', 'link-5');">notificar</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">desde</tt><tt class="py-op">,</tt> <tt class="py-name">equipo</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="model.util.Observable.notificar
+model.util.Observable.notificar
+script-util_py_.Observable.notificar" class="py-name" href="#" onclick="return doclink('link-6', 'notificar', 'link-5');">notificar</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="Piloto.eliminar_relacion"></a><div id="Piloto.eliminar_relacion-def"><a name="L56"></a><tt class="py-lineno"> 56</tt> <a class="py-toggle" href="#" id="Piloto.eliminar_relacion-toggle" onclick="return toggle('Piloto.eliminar_relacion');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Piloto.Piloto-class.html#eliminar_relacion">eliminar_relacion</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">equipo</tt><tt class="py-op">,</tt> <tt class="py-param">fecha</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Piloto.eliminar_relacion-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Piloto.eliminar_relacion-expanded"><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">        Permite eliminar la vinculaci&#243;n establecida entre el piloto y</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring">        el equipo en la fecha dada.</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">        @param equipo: El equipo al que est&#225;/estuvo vinculado el piloto.</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">        @type equipo: L{Equipo}</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">        @param fecha: Fecha de inicio de la relaci&#243;n.</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">        @type fecha: datetime.date</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">        @raises ValueError: Si no existe la relaci&#243;n con el equipo, o</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">        no comenz&#243; en la fecha indicada.</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">fecha</tt><tt class="py-op">,</tt> <tt class="py-name">equipo</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="model.util.Observable.notificar
+model.util.Observable.notificar
+script-util_py_.Observable.notificar" class="py-name" href="#" onclick="return doclink('link-7', 'notificar', 'link-5');">notificar</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="Piloto.obtener_equipo"></a><div id="Piloto.obtener_equipo-def"><a name="L73"></a><tt class="py-lineno"> 73</tt> <a class="py-toggle" href="#" id="Piloto.obtener_equipo-toggle" onclick="return toggle('Piloto.obtener_equipo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Piloto.Piloto-class.html#obtener_equipo">obtener_equipo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fecha</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Piloto.obtener_equipo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Piloto.obtener_equipo-expanded"><a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-docstring">        Recupera el equipo al que se encontraba vinculado el piloto en</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">        la fecha indicada, si existe.</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">        Si no se especifica la fecha, devuelve el &#250;ltimo equipo,</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">        i.e. el equipo actual.</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">        @param fecha: La fecha para la que se desea conocer la</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">        vinculaci&#243;n, o None obtener el m&#225;s reciente.</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">        @type fecha: datetime.date | None</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">        @return: El equipo al que se encontraba vinculado el piloto. None</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">        si ninguno.</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: L{Equipo}</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">fecha</tt><tt class="py-op">:</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">fecha</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-name">i</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">                    <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-name">i</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="Piloto.estuvo_en_equipo"></a><div id="Piloto.estuvo_en_equipo-def"><a name="L97"></a><tt class="py-lineno"> 97</tt> <a class="py-toggle" href="#" id="Piloto.estuvo_en_equipo-toggle" onclick="return toggle('Piloto.estuvo_en_equipo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Piloto.Piloto-class.html#estuvo_en_equipo">estuvo_en_equipo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">equipo</tt><tt class="py-op">,</tt> <tt class="py-param">periodo</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Piloto.estuvo_en_equipo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Piloto.estuvo_en_equipo-expanded"><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">        Determina si el piloto est&#225; o estuvo vinculado al equipo en</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">        alg&#250;n momento del per&#237;odo comprendido entre las fechas dadas.</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">        @param equipo: El equipo para el que se realiza la consulta.</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">        @type equipo: L{Equipo}</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">        @param periodo: Fechas de comienzo y fin del per&#237;odo.</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">        @type periodo: (datetime.date, datetime.date)</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-docstring">        @return: True/False si el piloto se encontraba vinculado al</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-docstring">        equipo en el per&#237;odo dado.</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: bool</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-op">(</tt><tt class="py-name">f</tt><tt class="py-op">,</tt><tt class="py-name">e</tt><tt class="py-op">)</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">:</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-op">(</tt><tt class="py-name">equipo</tt> <tt class="py-op">==</tt> <tt class="py-name">e</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-op">(</tt><tt class="py-name">periodo</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">f</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-op">(</tt><tt class="py-name">f</tt> <tt class="py-op">&lt;=</tt> <tt class="py-name">periodo</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"> </tt>
+<a name="Piloto.obtener_datos"></a><div id="Piloto.obtener_datos-def"><a name="L115"></a><tt class="py-lineno">115</tt> <a class="py-toggle" href="#" id="Piloto.obtener_datos-toggle" onclick="return toggle('Piloto.obtener_datos');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Piloto.Piloto-class.html#obtener_datos">obtener_datos</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Piloto.obtener_datos-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Piloto.obtener_datos-expanded"><a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring">        Recupera los datos relevantes del piloto.</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve los datos en un diccionario con las</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-docstring">        siguientes claves: 'nombre', 'nacimiento', 'foto' y 'equipos'.</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: dict</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-name">d</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-name">d</tt><tt class="py-op">[</tt><tt class="py-string">'nombre'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__nombre</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-name">d</tt><tt class="py-op">[</tt><tt class="py-string">'nacimiento'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__nacimiento</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-name">d</tt><tt class="py-op">[</tt><tt class="py-string">'foto'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__foto</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-name">d</tt><tt class="py-op">[</tt><tt class="py-string">'equipos'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__equipos</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">d</tt> </tt>
+</div><a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"> </tt>
+<a name="Piloto.establecer_datos"></a><div id="Piloto.establecer_datos-def"><a name="L130"></a><tt class="py-lineno">130</tt> <a class="py-toggle" href="#" id="Piloto.establecer_datos-toggle" onclick="return toggle('Piloto.establecer_datos');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Piloto.Piloto-class.html#establecer_datos">establecer_datos</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">datos</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Piloto.establecer_datos-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Piloto.establecer_datos-expanded"><a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">        Actualiza los siguientes datos del piloto: nombre, fecha de</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring">        nacimiento y uri de la foto.</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-docstring">        S&#243;lo se actualizan aquellos datos para los que se proporciona</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-docstring">        un valor.</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-docstring">        @param datos: Los datos a actualizar, en un diccionario con</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-docstring">        las siguientes claves: 'nombre', 'nacimiento', 'foto'.</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-docstring">        @type datos: dict</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"><tt class="py-docstring">        @raises Forbidden: Si el diccionario contiene alguna clave</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-docstring">        invalida.</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">clave</tt> <tt class="py-keyword">in</tt> <tt class="py-name">datos</tt><tt class="py-op">:</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">clave</tt> <tt class="py-op">==</tt> <tt class="py-string">'nombre'</tt><tt class="py-op">:</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__nombre</tt> <tt class="py-op">=</tt> <tt class="py-name">datos</tt><tt class="py-op">[</tt><tt class="py-name">clave</tt><tt class="py-op">]</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">clave</tt> <tt class="py-op">==</tt> <tt class="py-string">'nacimiento'</tt><tt class="py-op">:</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__nacimiento</tt> <tt class="py-op">=</tt> <tt class="py-name">datos</tt><tt class="py-op">[</tt><tt class="py-name">clave</tt><tt class="py-op">]</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">clave</tt> <tt class="py-op">==</tt> <tt class="py-string">'foto'</tt><tt class="py-op">:</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__foto</tt> <tt class="py-op">=</tt> <tt class="py-name">datos</tt><tt class="py-op">[</tt><tt class="py-name">clave</tt><tt class="py-op">]</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">                <tt class="py-keyword">raise</tt> <tt id="link-8" class="py-name"><a title="model.util" class="py-name" href="#" onclick="return doclink('link-8', 'util', 'link-0');">util</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Class model.util.Forbidden=model.util.Forbidden-class.html,Class script-Exceptions_py_.Forbidden=script-Exceptions_py_.Forbidden-class.html,Class script-util_py_.Forbidden=script-util_py_.Forbidden-class.html"><a title="model.util.Forbidden
+script-Exceptions_py_.Forbidden
+script-util_py_.Forbidden" class="py-name" href="#" onclick="return doclink('link-9', 'Forbidden', 'link-9');">Forbidden</a></tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name"><a title="model.util.Observable.notificar
+model.util.Observable.notificar
+script-util_py_.Observable.notificar" class="py-name" href="#" onclick="return doclink('link-10', 'notificar', 'link-5');">notificar</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">    <tt id="link-11" class="py-name"><a title="model.Equipo.Equipo.nombre
+model.GP.GP.nombre
+model.Piloto.Piloto.nombre
+model.Temporada.Temporada.nombre
+model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre
+script-Equipo_py_.Equipo.nombre
+script-Piloto_py_.Piloto.nombre
+script-Temporada_py_.Temporada.nombre
+script-core_py_.Equipo.nombre
+script-core_py_.GP.nombre
+script-core_py_.Piloto.nombre
+script-core_py_.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-11', 'nombre', 'link-4');">nombre</a></tt> <tt class="py-op">=</tt> <tt class="py-name">property</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">    <tt id="link-12" class="py-name" targets="Variable model.Piloto.Piloto.nacimiento=model.Piloto.Piloto-class.html#nacimiento,Variable model.core.Piloto.nacimiento=model.core.Piloto-class.html#nacimiento,Variable script-Piloto_py_.Piloto.nacimiento=script-Piloto_py_.Piloto-class.html#nacimiento,Variable script-core_py_.Piloto.nacimiento=script-core_py_.Piloto-class.html#nacimiento"><a title="model.Piloto.Piloto.nacimiento
+model.core.Piloto.nacimiento
+script-Piloto_py_.Piloto.nacimiento
+script-core_py_.Piloto.nacimiento" class="py-name" href="#" onclick="return doclink('link-12', 'nacimiento', 'link-12');">nacimiento</a></tt> <tt class="py-op">=</tt> <tt class="py-name">property</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">    <tt id="link-13" class="py-name" targets="Variable model.Piloto.Piloto.foto=model.Piloto.Piloto-class.html#foto,Variable model.core.Piloto.foto=model.core.Piloto-class.html#foto,Variable script-Piloto_py_.Piloto.foto=script-Piloto_py_.Piloto-class.html#foto,Variable script-core_py_.Piloto.foto=script-core_py_.Piloto-class.html#foto"><a title="model.Piloto.Piloto.foto
+model.core.Piloto.foto
+script-Piloto_py_.Piloto.foto
+script-core_py_.Piloto.foto" class="py-name" href="#" onclick="return doclink('link-13', 'foto', 'link-13');">foto</a></tt> <tt class="py-op">=</tt> <tt class="py-name">property</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">    <tt id="link-14" class="py-name" targets="Variable model.Piloto.Piloto.equipos=model.Piloto.Piloto-class.html#equipos,Variable model.Temporada.Temporada.equipos=model.Temporada.Temporada-class.html#equipos,Variable model.core.Piloto.equipos=model.core.Piloto-class.html#equipos,Variable model.core.Temporada.equipos=model.core.Temporada-class.html#equipos,Variable script-Piloto_py_.Piloto.equipos=script-Piloto_py_.Piloto-class.html#equipos,Variable script-Temporada_py_.Temporada.equipos=script-Temporada_py_.Temporada-class.html#equipos,Variable script-core_py_.Piloto.equipos=script-core_py_.Piloto-class.html#equipos,Variable script-core_py_.Temporada.equipos=script-core_py_.Temporada-class.html#equipos"><a title="model.Piloto.Piloto.equipos
+model.Temporada.Temporada.equipos
+model.core.Piloto.equipos
+model.core.Temporada.equipos
+script-Piloto_py_.Piloto.equipos
+script-Temporada_py_.Temporada.equipos
+script-core_py_.Piloto.equipos
+script-core_py_.Temporada.equipos" class="py-name" href="#" onclick="return doclink('link-14', 'equipos', 'link-14');">equipos</a></tt> <tt class="py-op">=</tt> <tt class="py-name">property</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Mar 14 12:11:03 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module util</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>util</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/cabrero/Documents/docencia/iu/0910/app/src/model/util.py">/Users/cabrero/Documents/docencia/iu/0910/app/src/model/util.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="util.html#Observable">Observable</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="exceptions.html#Exception">exceptions.Exception</a>(<a href="exceptions.html#BaseException">exceptions.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="util.html#BussinessRuleError">BussinessRuleError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="util.html#Forbidden">Forbidden</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BussinessRuleError">class <strong>BussinessRuleError</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Excepción&nbsp;lanzada&nbsp;cuando&nbsp;la&nbsp;realización&nbsp;de&nbsp;una&nbsp;operación&nbsp;rompería<br>
+alguna&nbsp;regla&nbsp;de&nbsp;negocio&nbsp;de&nbsp;la&nbsp;aplicación.&nbsp;P.e.:&nbsp;cambiar&nbsp;la&nbsp;fecha<br>
+de&nbsp;inicio&nbsp;de&nbsp;la&nbsp;temporada&nbsp;después&nbsp;de&nbsp;disputar&nbsp;la&nbsp;primera&nbsp;carrera.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="util.html#BussinessRuleError">BussinessRuleError</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BussinessRuleError-__init__"><strong>__init__</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="BussinessRuleError-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x100119f80&gt;<dd><tt>T.<a href="#BussinessRuleError-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="BussinessRuleError-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#BussinessRuleError-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="BussinessRuleError-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#BussinessRuleError-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="BussinessRuleError-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#BussinessRuleError-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="BussinessRuleError-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#BussinessRuleError-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="BussinessRuleError-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="BussinessRuleError-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#BussinessRuleError-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="BussinessRuleError-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#BussinessRuleError-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="BussinessRuleError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="BussinessRuleError-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Forbidden">class <strong>Forbidden</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Excepción&nbsp;lanzada&nbsp;por&nbsp;el&nbsp;modelo&nbsp;de&nbsp;la&nbsp;aplicación&nbsp;cuando&nbsp;se&nbsp;intenta<br>
+una&nbsp;operación&nbsp;no&nbsp;permitida.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="util.html#Forbidden">Forbidden</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Forbidden-__init__"><strong>__init__</strong></a>(self, value<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Forbidden-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object at 0x100119f80&gt;<dd><tt>T.<a href="#Forbidden-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="Forbidden-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Forbidden-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Forbidden-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#Forbidden-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Forbidden-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#Forbidden-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="Forbidden-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#Forbidden-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="Forbidden-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Forbidden-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#Forbidden-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="Forbidden-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Forbidden-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Forbidden-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Forbidden-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Observable">class <strong>Observable</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Clase&nbsp;base&nbsp;para&nbsp;todos&nbsp;los&nbsp;objetos&nbsp;del&nbsp;modelo&nbsp;de&nbsp;la&nbsp;aplicación&nbsp;que<br>
+incorporan&nbsp;el&nbsp;mecanismo&nbsp;de&nbsp;observadores.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Observable-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Observable-anadir_observador"><strong>anadir_observador</strong></a>(self, observador)</dt><dd><tt>Añade&nbsp;un&nbsp;observador&nbsp;al&nbsp;objeto&nbsp;observado.<br>
+&nbsp;<br>
+@param&nbsp;observador:&nbsp;El&nbsp;observador&nbsp;a&nbsp;añadir.<br>
+@type&nbsp;observador:&nbsp;<a href="__builtin__.html#object">object</a><br>
+&nbsp;<br>
+@raises&nbsp;<a href="#Forbidden">Forbidden</a>:&nbsp;Si&nbsp;el&nbsp;observador&nbsp;no&nbsp;implementa&nbsp;el&nbsp;método<br>
+actualizar.</tt></dd></dl>
+
+<dl><dt><a name="Observable-eliminar_observador"><strong>eliminar_observador</strong></a>(self, observador)</dt><dd><tt>Elimina&nbsp;un&nbsp;observador&nbsp;de&nbsp;la&nbsp;lista&nbsp;de&nbsp;observadores.<br>
+&nbsp;<br>
+@note:&nbsp;La&nbsp;operación&nbsp;tiene&nbsp;éxito&nbsp;aunque&nbsp;el&nbsp;observador&nbsp;no<br>
+estuviese&nbsp;en&nbsp;la&nbsp;lista.</tt></dd></dl>
+
+<dl><dt><a name="Observable-notificar"><strong>notificar</strong></a>(self)</dt><dd><tt>Notifica&nbsp;de&nbsp;un&nbsp;cambio&nbsp;a&nbsp;todos&nbsp;los&nbsp;observadores.<br>
+&nbsp;<br>
+@note:&nbsp;Este&nbsp;método&nbsp;no&nbsp;está&nbsp;pensado&nbsp;para&nbsp;ser&nbsp;invocado&nbsp;desde<br>
+fuera&nbsp;del&nbsp;propio&nbsp;objeto&nbsp;observado.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>observadores</strong></dt>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>model.core.GP</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;model ::
+        <a href="model.core-module.html" onclick="show_private();">Module&nbsp;core</a> ::
+        Class&nbsp;GP
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="model.core.GP-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class GP</h1><p class="nomargin-top"><span class="codelink"><a href="model.core-pysrc.html#GP">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+     object --+    
+              |    
+<a href="model.util.Observable-class.html">util.Observable</a> --+
+                  |
+                 <strong class="uidshort">GP</strong>
+</pre>
+
+<hr />
+<p>Los objetos de la clase GP representan los Grandes Premios de una 
+  temporada. Los datos de un GP son su nombre, lugar de celebraci&#243;n, fecha 
+  de comienzo y fecha de finalizaci&#243;n.</p>
+  <p>Para los GPs que ya se han disputado, se mantienen sendas relaciones 
+  con el orden en que finalizaron los pilotos la sesi&#243;n de clasificaci&#243;n y 
+  el orden en que finalizaron la carrera.</p>
+  <p>As&#237; mismo para cada GP finalizado es necesario indicar el % de vueltas
+  completadas, ya que esta informaci&#243;n es necesaria para el c&#225;lculo de las 
+  puntuaciones.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nombre</span>,
+        <span class="summary-sig-arg">lugar</span>,
+        <span class="summary-sig-arg">inicio</span>,
+        <span class="summary-sig-arg">fin</span>,
+        <span class="summary-sig-arg">n_vueltas</span>)</span><br />
+      El constructor de la clase.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#establecer_temporada" class="summary-sig-name">establecer_temporada</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">temporada</span>)</span><br />
+      Establece la temporada en que se disputa el GP.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.establecer_temporada">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#ha_comenzado" class="summary-sig-name">ha_comenzado</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Indica si el GP ha comenzado.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.ha_comenzado">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#ha_finalizado" class="summary-sig-name">ha_finalizado</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Indica si el GP ha finalzado</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.ha_finalizado">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#posicion_piloto" class="summary-sig-name">posicion_piloto</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">piloto</span>)</span><br />
+      Devuelve la posici&#243;n en que el piloto finalizo el GP.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.posicion_piloto">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#establecer_parrilla" class="summary-sig-name">establecer_parrilla</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pilotos</span>)</span><br />
+      Establece la parrila de salida del GP tras la sesi&#243;n de 
+      clasificaci&#243;n.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.establecer_parrilla">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#establecer_resultado" class="summary-sig-name">establecer_resultado</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pilotos</span>,
+        <span class="summary-sig-arg">n_vueltas_completadas</span>)</span><br />
+      Establece el resultado de la carrera, i.e.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.establecer_resultado">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[<a href="model.core.Piloto-class.html" class="link">Piloto</a>]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#obtener_parrilla" class="summary-sig-name">obtener_parrilla</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Devuelve la lista ordenada de pilotos en la parrilla de salida.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.obtener_parrilla">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[<a href="model.core.Piloto-class.html" class="link">Piloto</a>]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#obtener_resultado" class="summary-sig-name">obtener_resultado</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Devuelve la lista ordenada de pilotos seg&#250;n su posici&#243;n al finalizar 
+      la carrera.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.obtener_resultado">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[<a href="model.core.Piloto-class.html" class="link">Piloto</a>]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#obtener_pilotos_equipo" class="summary-sig-name">obtener_pilotos_equipo</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">equipo</span>)</span><br />
+      Devuelve la lista de los pilotos del equipo que disputaron la 
+      carrera.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.obtener_pilotos_equipo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">dict</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#obtener_datos" class="summary-sig-name">obtener_datos</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Recupera los datos relevantes del GP.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.obtener_datos">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="model.core.GP-class.html#establecer_datos" class="summary-sig-name">establecer_datos</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">datos</span>)</span><br />
+      Actualiza los siguientes datos del GP: nombre, lugar, fecha de 
+      comienzo, fecha de finalizaci&#243;n, n&#250;mero de vueltas a completar.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="model.core-pysrc.html#GP.establecer_datos">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="model.util.Observable-class.html">util.Observable</a></code></b>:
+      <code><a href="model.util.Observable-class.html#anadir_observador">anadir_observador</a></code>,
+      <code><a href="model.util.Observable-class.html#eliminar_observador">eliminar_observador</a></code>,
+      <code><a href="model.util.Observable-class.html#notificar">notificar</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_sin_comenzar"></a><span class="summary-name">_sin_comenzar</span> = <code title="'sin_comenzar'"><code class="variable-quote">'</code><code class="variable-string">sin_comenzar</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_comenzado"></a><span class="summary-name">_comenzado</span> = <code title="'comenzado'"><code class="variable-quote">'</code><code class="variable-string">comenzado</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_finalizado"></a><span class="summary-name">_finalizado</span> = <code title="'finalizado'"><code class="variable-quote">'</code><code class="variable-string">finalizado</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="nombre"></a><span class="summary-name">nombre</span>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="lugar"></a><span class="summary-name">lugar</span>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="inicio"></a><span class="summary-name">inicio</span>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="fin"></a><span class="summary-name">fin</span>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="n_vueltas_gp"></a><span class="summary-name">n_vueltas_gp</span>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="estado"></a><span class="summary-name">estado</span>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="porcentaje_completado"></a><span class="summary-name">porcentaje_completado</span>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="parilla"></a><span class="summary-name">parilla</span>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="resultado"></a><span class="summary-name">resultado</span>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="temporada"></a><span class="summary-name">temporada</span>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="model.util.Observable-class.html">util.Observable</a></code></b>:
+      <code><a href="model.util.Observable-class.html#observadores">observadores</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">nombre</span>,
+        <span class="sig-arg">lugar</span>,
+        <span class="sig-arg">inicio</span>,
+        <span class="sig-arg">fin</span>,
+        <span class="sig-arg">n_vueltas</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>El constructor de la clase.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>nombre</code></strong> (String) - El nombre del GP.</li>
+        <li><strong class="pname"><code>lugar</code></strong> (String) - El lugar de celebraci&#243;n.</li>
+        <li><strong class="pname"><code>inicio</code></strong> (datetime.date) - Fecha de inicio del GP.</li>
+        <li><strong class="pname"><code>fin</code></strong> (datetime.date) - Fecha de finalizaci&#243;n del GP.</li>
+        <li><strong class="pname"><code>n_vueltas</code></strong> (int) - N&#250;mero de vueltas de la carrera.</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="establecer_temporada"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">establecer_temporada</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">temporada</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.establecer_temporada">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Establece la temporada en que se disputa el GP.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>temporada</code></strong> (<a href="model.core.Temporada-class.html" 
+          class="link">Temporada</a>) - Temporada en que se disputa el GP.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'><a href="model.util.Forbidden-class.html">Forbidden</a></strong></code> - Si la temporada ya hab&#237;a sido establecida.</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <strong>Notes:</strong>
+      <ul class="nomargin-top">
+        <li>
+        Una vez establecida la temporada no se puede cambiar.
+        </li>
+        <li>
+        El m&#233;todo <a href="model.core.Temporada-class.html#anadir_GP" 
+        class="link">Temporada.anadir_GP</a> se encarga de llamar este 
+        m&#233;todo.
+        </li>
+      </ul>
+</div></td></tr></table>
+</div>
+<a name="ha_comenzado"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ha_comenzado</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.ha_comenzado">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Indica si el GP ha comenzado.</p>
+  <dl class="fields">
+    <dt>Returns: bool</dt>
+        <dd>Si el GP ha comenzado.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="ha_finalizado"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ha_finalizado</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.ha_finalizado">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Indica si el GP ha finalzado</p>
+  <dl class="fields">
+    <dt>Returns: bool</dt>
+        <dd>Si el GP ha finalizado.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="posicion_piloto"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">posicion_piloto</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">piloto</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.posicion_piloto">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Devuelve la posici&#243;n en que el piloto finalizo el GP.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>piloto</code></strong> (<a href="model.core.Piloto-class.html" class="link">Piloto</a>) - El piloto para el que se desea conocer la posici&#243;n.</li>
+    </ul></dd>
+    <dt>Returns: int</dt>
+        <dd>La posici&#243;n final en la carrera.</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>ValueError</strong></code> - Si el piloto no participo en la carrera.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="establecer_parrilla"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">establecer_parrilla</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pilotos</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.establecer_parrilla">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Establece la parrila de salida del GP tras la sesi&#243;n de 
+  clasificaci&#243;n.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>pilotos</code></strong> ([<a href="model.core.Piloto-class.html" class="link">Piloto</a>]) - Lista ordenada de los pilotos seg&#250;n su posici&#243;n en la 
+          clasificaci&#243;n.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'><a href="model.util.BussinessRuleError-class.html">BussinessRuleError</a></strong></code> - Si ya est&#225; establecido el resultado de la carrera o el n&#186; de 
+        pilotos es mayor que el n&#186; de pilotos por GP establecido para la 
+        temporada.</li>
+        <li><code><strong class='fraise'><a href="model.util.Forbidden-class.html">Forbidden</a></strong></code> - Si alg&#250;n objeto de la lista pilotos no es de la clase <a 
+        href="model.core.Piloto-class.html" class="link">Piloto</a>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="establecer_resultado"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">establecer_resultado</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pilotos</span>,
+        <span class="sig-arg">n_vueltas_completadas</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.establecer_resultado">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Establece el resultado de la carrera, i.e. posici&#243;n final de los 
+  pilotos y n&#250;mero de vueltas completadas.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>pilotos</code></strong> ([<a href="model.core.Piloto-class.html" class="link">Piloto</a>]) - Lista ordenada de los pilotos seg&#250;n su posici&#243;n final.</li>
+        <li><strong class="pname"><code>n_vueltas_completadas</code></strong> (int) - N&#186; de vueltas completadas.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'><a href="model.util.BussinessRuleError-class.html">BussinessRuleError</a></strong></code> - Si no est&#225; establecida la parilla de salida o el n&#186; de vueltas 
+        completadas es mayor que el n&#186; de vueltas del GP, o el n&#186; de 
+        pilotos es mayor que el n&#186; de pilotos por GP establecido para la 
+        temporada o el n&#186; de pilotos en parrilla de salida.</li>
+        <li><code><strong class='fraise'><a href="model.util.Forbidden-class.html">Forbidden</a></strong></code> - Si alg&#250;n objeto de la lista pilotos no es de la clase <a 
+        href="model.core.Piloto-class.html" class="link">Piloto</a>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="obtener_parrilla"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">obtener_parrilla</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.obtener_parrilla">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Devuelve la lista ordenada de pilotos en la parrilla de salida.</p>
+  <dl class="fields">
+    <dt>Returns: [<a href="model.core.Piloto-class.html" class="link">Piloto</a>]</dt>
+        <dd>La lista de pilotos.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="obtener_resultado"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">obtener_resultado</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.obtener_resultado">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Devuelve la lista ordenada de pilotos seg&#250;n su posici&#243;n al finalizar 
+  la carrera.</p>
+  <dl class="fields">
+    <dt>Returns: [<a href="model.core.Piloto-class.html" class="link">Piloto</a>]</dt>
+        <dd>La lista de pilotos.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="obtener_pilotos_equipo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">obtener_pilotos_equipo</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">equipo</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.obtener_pilotos_equipo">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Devuelve la lista de los pilotos del equipo que disputaron la 
+  carrera.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>equipo</code></strong> (<a href="model.core.Equipo-class.html" class="link">Equipo</a>) - El equipo para el que se consultan los pilotos.</li>
+    </ul></dd>
+    <dt>Returns: [<a href="model.core.Piloto-class.html" class="link">Piloto</a>]</dt>
+        <dd>Los pilotos del equipo que disputaron la carrera.</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>ValueError</strong></code> - Si el GP no ha finalizado.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="obtener_datos"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">obtener_datos</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.obtener_datos">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Recupera los datos relevantes del GP.</p>
+  <dl class="fields">
+    <dt>Returns: dict</dt>
+        <dd>Devuelve los datos en un diccionario con las siguientes claves: 
+          'nombre', 'lugar', 'inicio', 'fin', 'n_vueltas_gp'.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="establecer_datos"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">establecer_datos</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">datos</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="model.core-pysrc.html#GP.establecer_datos">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Actualiza los siguientes datos del GP: nombre, lugar, fecha de 
+  comienzo, fecha de finalizaci&#243;n, n&#250;mero de vueltas a completar.</p>
+  <p>S&#243;lo se actualizan aquellos datos para los que se proporciona un 
+  valor.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>datos</code></strong> (dict) - Los datos a actualizar, en un diccionario con las siguientes 
+          claves: 'nombre', 'lugar', 'inicio', 'fin', 'n_vueltas_gp'.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'><a href="model.util.Forbidden-class.html">Forbidden</a></strong></code> - Si el diccionario contiene alguna clave invalida.</li>
+        <li><code><strong class='fraise'><a href="model.util.BussinessRuleError-class.html">BussinessRuleError</a></strong></code> - Si se intentan cambiar las condiciones una vez comenzada la 
+        carrera, o se intenta cambiar las fechas de inicio o fin por otras 
+        no compatibles con la temporada.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Mar 15 03:19:48 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,601 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-04-30 15:18+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: Controlador.py:57
+msgid "Drivers' Championship"
+msgstr ""
+
+#: Controlador.py:58
+msgid "Teams' Championship"
+msgstr ""
+
+#: Controlador.py:59
+msgid "Race Results"
+msgstr ""
+
+#: Controlador.py:60
+msgid "Season Calendar"
+msgstr ""
+
+#: Controlador.py:90
+msgid ": Drivers' Championship results"
+msgstr ""
+
+#: Controlador.py:93
+msgid ": Teams' Championship results"
+msgstr ""
+
+#: Controlador.py:96
+msgid ": Race calendar"
+msgstr ""
+
+#: Controlador.py:98
+msgid "There aren't any seasons stored in the database yet"
+msgstr ""
+
+#: Controlador.py:107 Controlador.py:125 Controlador.py:143 Controlador.py:163
+#: Controlador.py:335 Controlador.py:350 Controlador.py:421 Controlador.py:463
+#: Controlador.py:726
+msgid "Position"
+msgstr ""
+
+#: Controlador.py:111 Controlador.py:129 Controlador.py:147 Controlador.py:338
+#: Controlador.py:354 Controlador.py:422 Controlador.py:464 Controlador.py:688
+#: glade/interfaz.glade.h:28
+msgid "Driver"
+msgstr ""
+
+#: Controlador.py:151 Controlador.py:171 Controlador.py:731
+msgid "Points"
+msgstr ""
+
+#: Controlador.py:167 Controlador.py:669
+msgid "Team"
+msgstr ""
+
+#: Controlador.py:183 glade/interfaz.glade.h:57
+msgid "Race"
+msgstr ""
+
+#: Controlador.py:187
+msgid "Starting Date"
+msgstr ""
+
+#: Controlador.py:191
+msgid "Ending Date"
+msgstr ""
+
+#: Controlador.py:650
+msgid "Season Name"
+msgstr ""
+
+#: Controlador.py:707 Controlador.py:990 glade/interfaz.glade.h:49
+msgid "Grand Prix"
+msgstr ""
+
+#: Controlador.py:1029
+msgid "Finished"
+msgstr ""
+
+#: Controlador.py:1031
+msgid "Started"
+msgstr ""
+
+#: Controlador.py:1145 main.py:247 main.py:249 main.py:282 main.py:283
+#: main.py:340 main.py:341 main.py:509 main.py:510 main.py:579 main.py:581
+#: main.py:601 main.py:602 main.py:712 main.py:815 glade/interfaz.glade.h:72
+msgid "Select a date"
+msgstr ""
+
+#: Controlador.py:1221 Controlador.py:1246
+msgid "Name"
+msgstr ""
+
+#: Controlador.py:1249
+msgid "Signing Date"
+msgstr ""
+
+#: main.py:516 main.py:526 main.py:604
+msgid "Not Started"
+msgstr ""
+
+#: main.py:823
+msgid "All files"
+msgstr ""
+
+#: main.py:828
+msgid "Images"
+msgstr ""
+
+#: glade/interfaz.glade.h:1
+msgid "About"
+msgstr ""
+
+#: glade/interfaz.glade.h:2
+msgid "Are you sure the data entered is correct?"
+msgstr ""
+
+#: glade/interfaz.glade.h:3
+msgid "Are you sure you want to delete the selected Grand Prix?"
+msgstr ""
+
+#: glade/interfaz.glade.h:4
+msgid "Are you sure you want to delete the selected driver?"
+msgstr ""
+
+#: glade/interfaz.glade.h:5
+msgid "Are you sure you want to delete the selected points?"
+msgstr ""
+
+#: glade/interfaz.glade.h:6
+msgid "Are you sure you want to delete the selected season?"
+msgstr ""
+
+#: glade/interfaz.glade.h:7
+msgid "Are you sure you want to delete the selected team?"
+msgstr ""
+
+#: glade/interfaz.glade.h:8
+msgid "Are you sure you want to discard the changes to the points system?"
+msgstr ""
+
+#: glade/interfaz.glade.h:9
+msgid "Are you sure you want to discard the current changes?"
+msgstr ""
+
+#: glade/interfaz.glade.h:10
+msgid "Are you sure you want to save the current Grand Prix?"
+msgstr ""
+
+#: glade/interfaz.glade.h:11
+msgid "Are you sure you want to save the current driver?"
+msgstr ""
+
+#: glade/interfaz.glade.h:12
+msgid "Are you sure you want to save the current season?"
+msgstr ""
+
+#: glade/interfaz.glade.h:13
+msgid "Are you sure you want to save the current team?"
+msgstr ""
+
+#: glade/interfaz.glade.h:14
+msgid "Are you sure you want to save the points system?"
+msgstr ""
+
+#: glade/interfaz.glade.h:15
+msgid "Attention!"
+msgstr ""
+
+#: glade/interfaz.glade.h:16
+msgid "Circuit:"
+msgstr ""
+
+#: glade/interfaz.glade.h:17
+msgid "Classification"
+msgstr ""
+
+#: glade/interfaz.glade.h:18
+msgid "Completed laps:"
+msgstr ""
+
+#: glade/interfaz.glade.h:19
+msgid "Confirm results"
+msgstr ""
+
+#: glade/interfaz.glade.h:20
+msgid "DO NOT TRANSLATE"
+msgstr ""
+
+#: glade/interfaz.glade.h:21
+msgid "Date of birth:"
+msgstr ""
+
+#: glade/interfaz.glade.h:22
+msgid "Delete points"
+msgstr ""
+
+#: glade/interfaz.glade.h:23
+msgid "Delete the driver"
+msgstr ""
+
+#: glade/interfaz.glade.h:24
+msgid "Delete the season"
+msgstr ""
+
+#: glade/interfaz.glade.h:25
+msgid "Delete the team"
+msgstr ""
+
+#: glade/interfaz.glade.h:26
+msgid "Discard Changes"
+msgstr ""
+
+#: glade/interfaz.glade.h:27
+msgid "Discard changes"
+msgstr ""
+
+#: glade/interfaz.glade.h:29
+msgid "Driver / Team / GP / Calendar"
+msgstr ""
+
+#: glade/interfaz.glade.h:30
+msgid "Driver list"
+msgstr ""
+
+#: glade/interfaz.glade.h:31
+msgid "Driver list:"
+msgstr ""
+
+#: glade/interfaz.glade.h:32
+msgid "Driver name:"
+msgstr ""
+
+#: glade/interfaz.glade.h:33
+msgid "E_dit Results"
+msgstr ""
+
+#: glade/interfaz.glade.h:34
+msgid "E_nter results"
+msgstr ""
+
+#: glade/interfaz.glade.h:35
+msgid "Edit"
+msgstr ""
+
+#: glade/interfaz.glade.h:36
+msgid "Edit _Driver"
+msgstr ""
+
+#: glade/interfaz.glade.h:37
+msgid "Edit _GP"
+msgstr ""
+
+#: glade/interfaz.glade.h:38
+msgid "Edit _Grand Prix"
+msgstr ""
+
+#: glade/interfaz.glade.h:39
+msgid "Edit _Season"
+msgstr ""
+
+#: glade/interfaz.glade.h:40
+msgid "Edit _Team"
+msgstr ""
+
+#: glade/interfaz.glade.h:41
+msgid ""
+"Edit _Team\n"
+"NO IMPLEMENTADO"
+msgstr ""
+
+#: glade/interfaz.glade.h:43
+msgid ""
+"Either you are triying to add a Grand Prix to a season prior to determining "
+"the points system or the dates of the Grand Prix are incompatible with the "
+"season"
+msgstr ""
+
+#: glade/interfaz.glade.h:44
+msgid "End date:"
+msgstr ""
+
+#: glade/interfaz.glade.h:45
+msgid "GP"
+msgstr ""
+
+#: glade/interfaz.glade.h:46
+msgid "GP list:"
+msgstr ""
+
+#: glade/interfaz.glade.h:47
+msgid "GP name:"
+msgstr ""
+
+#: glade/interfaz.glade.h:48
+msgid "GPs"
+msgstr ""
+
+#: glade/interfaz.glade.h:50
+msgid "Grand Prix:"
+msgstr ""
+
+#: glade/interfaz.glade.h:51
+msgid "Logo:"
+msgstr ""
+
+#: glade/interfaz.glade.h:52
+msgid "Number of drivers by GP:"
+msgstr ""
+
+#: glade/interfaz.glade.h:53
+msgid "Number of drivers in qualifying:"
+msgstr ""
+
+#: glade/interfaz.glade.h:54
+msgid "Number of laps:"
+msgstr ""
+
+#: glade/interfaz.glade.h:55
+msgid "Picture:"
+msgstr ""
+
+#: glade/interfaz.glade.h:56
+msgid "Qualifying"
+msgstr ""
+
+#: glade/interfaz.glade.h:58
+msgid "Results"
+msgstr ""
+
+#: glade/interfaz.glade.h:59
+msgid "Save changes"
+msgstr ""
+
+#: glade/interfaz.glade.h:60
+msgid "Save failed"
+msgstr ""
+
+#: glade/interfaz.glade.h:61
+msgid "Save the season"
+msgstr ""
+
+#: glade/interfaz.glade.h:62
+msgid "Season"
+msgstr ""
+
+#: glade/interfaz.glade.h:63
+msgid "Season list"
+msgstr ""
+
+#: glade/interfaz.glade.h:64
+msgid "Season name:"
+msgstr ""
+
+#: glade/interfaz.glade.h:65
+msgid "Season short name:"
+msgstr ""
+
+#: glade/interfaz.glade.h:66
+msgid "Season's GP list:"
+msgstr ""
+
+#: glade/interfaz.glade.h:67
+msgid "Season's driver list:"
+msgstr ""
+
+#: glade/interfaz.glade.h:68
+msgid "Season's point rules:"
+msgstr ""
+
+#: glade/interfaz.glade.h:69
+msgid "Season's points system:"
+msgstr ""
+
+#: glade/interfaz.glade.h:70
+msgid "Season's team list:"
+msgstr ""
+
+#: glade/interfaz.glade.h:71
+msgid "Season:"
+msgstr ""
+
+#: glade/interfaz.glade.h:73
+msgid "Select the date of birth"
+msgstr ""
+
+#: glade/interfaz.glade.h:74
+msgid "Select the date of birth:"
+msgstr ""
+
+#: glade/interfaz.glade.h:75
+msgid "Select the driver picture"
+msgstr ""
+
+#: glade/interfaz.glade.h:76
+msgid "Select the ending date"
+msgstr ""
+
+#: glade/interfaz.glade.h:77
+msgid "Select the ending date:"
+msgstr ""
+
+#: glade/interfaz.glade.h:78
+msgid "Select the season you wish to edit:"
+msgstr ""
+
+#: glade/interfaz.glade.h:79
+msgid "Select the starting date"
+msgstr ""
+
+#: glade/interfaz.glade.h:80
+msgid "Select the starting date:"
+msgstr ""
+
+#: glade/interfaz.glade.h:81
+msgid "Set season's _point rules"
+msgstr ""
+
+#: glade/interfaz.glade.h:82
+msgid "Start date:"
+msgstr ""
+
+#: glade/interfaz.glade.h:83
+msgid "Status:"
+msgstr ""
+
+#: glade/interfaz.glade.h:84
+msgid "Success"
+msgstr ""
+
+#: glade/interfaz.glade.h:85
+msgid "Success!"
+msgstr ""
+
+#: glade/interfaz.glade.h:86
+msgid "Team list:"
+msgstr ""
+
+#: glade/interfaz.glade.h:87
+msgid "Team name:"
+msgstr ""
+
+#: glade/interfaz.glade.h:88
+msgid "Team's driver list"
+msgstr ""
+
+#: glade/interfaz.glade.h:89
+msgid "Team's driver list:"
+msgstr ""
+
+#: glade/interfaz.glade.h:90
+msgid "Team's season list"
+msgstr ""
+
+#: glade/interfaz.glade.h:91
+msgid "Team's season list:"
+msgstr ""
+
+#: glade/interfaz.glade.h:92
+msgid "The Grand Prix data was successfully saved"
+msgstr ""
+
+#: glade/interfaz.glade.h:93
+msgid "The Grand Prix has already started"
+msgstr ""
+
+#: glade/interfaz.glade.h:94
+msgid "The changes to the points system were successfully saved"
+msgstr ""
+
+#: glade/interfaz.glade.h:95
+msgid "The data entered for the driver is either invalid or incomplete"
+msgstr ""
+
+#: glade/interfaz.glade.h:96
+msgid "The data entered for the season is either invalid or incomplete"
+msgstr ""
+
+#: glade/interfaz.glade.h:97
+msgid "The data entered for the team is either invalid or incomplete"
+msgstr ""
+
+#: glade/interfaz.glade.h:98
+msgid "The data entered is either invalid or incomplete"
+msgstr ""
+
+#: glade/interfaz.glade.h:99
+msgid "The driver data was successfully saved"
+msgstr ""
+
+#: glade/interfaz.glade.h:100
+msgid "The results were succesfully saved"
+msgstr ""
+
+#: glade/interfaz.glade.h:101
+msgid "The season data was successfully saved"
+msgstr ""
+
+#: glade/interfaz.glade.h:102
+msgid "The season has already started"
+msgstr ""
+
+#: glade/interfaz.glade.h:103
+msgid "The team data was successfully saved"
+msgstr ""
+
+#: glade/interfaz.glade.h:104
+msgid "There are no more Grand Prixes without results"
+msgstr ""
+
+#: glade/interfaz.glade.h:105
+msgid "View driver list"
+msgstr ""
+
+#: glade/interfaz.glade.h:106
+msgid "View season list"
+msgstr ""
+
+#: glade/interfaz.glade.h:107
+msgid "View season's _GP list"
+msgstr ""
+
+#: glade/interfaz.glade.h:108
+msgid "View season's _driver list"
+msgstr ""
+
+#: glade/interfaz.glade.h:109
+msgid "View season's _team list"
+msgstr ""
+
+#: glade/interfaz.glade.h:110
+msgid ""
+"You can only change the name of the season when at least one Grand Prix has "
+"started"
+msgstr ""
+
+#: glade/interfaz.glade.h:111
+msgid ""
+"You can only change the name or place of the Grand Prix when it has already "
+"started"
+msgstr ""
+
+#: glade/interfaz.glade.h:112
+msgid ""
+"You can't change the points system when at least one Grand Prix has started"
+msgstr ""
+
+#: glade/interfaz.glade.h:113
+msgid "_Change current team"
+msgstr ""
+
+#: glade/interfaz.glade.h:114
+msgid "_Change logo"
+msgstr ""
+
+#: glade/interfaz.glade.h:115
+msgid "_Change picture"
+msgstr ""
+
+#: glade/interfaz.glade.h:116
+msgid "_Edit"
+msgstr ""
+
+#: glade/interfaz.glade.h:117
+msgid "_File"
+msgstr ""
+
+#: glade/interfaz.glade.h:118
+msgid "_Help"
+msgstr ""
+
+#: glade/interfaz.glade.h:119
+msgid "_Results"
+msgstr ""
+
+#: glade/interfaz.glade.h:120
+msgid "_View Results"
+msgstr ""
+
+#: glade/interfaz.glade.h:121
+msgid "_View results"
+msgstr ""
+
+#: glade/interfaz.glade.h:122
+msgid "pyF1"
+msgstr ""

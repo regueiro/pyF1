@@ -1,0 +1,621 @@
+&id038 !!python/object:model.core.Temporada
+_Observable__observadores: []
+_Temporada__equipos:
+- &id001 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Red Bull
+  _Observable__observadores: []
+- &id003 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Ferrari
+  _Observable__observadores: []
+- &id004 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: McLaren
+  _Observable__observadores: []
+- &id006 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Renault
+  _Observable__observadores: []
+- &id005 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Mercedes GP
+  _Observable__observadores: []
+- &id007 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Force India
+  _Observable__observadores: []
+- &id008 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Williams
+  _Observable__observadores: []
+- &id009 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Sauber
+  _Observable__observadores: []
+- &id010 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Toro Rosso
+  _Observable__observadores: []
+- &id011 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Virgin Racing
+  _Observable__observadores: []
+- &id012 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Lotus F1 Racing
+  _Observable__observadores: []
+- &id013 !!python/object:model.core.Equipo
+  _Equipo__escudo: null
+  _Equipo__fin: null
+  _Equipo__inicio: null
+  _Equipo__nombre: Hispania Racing F1 Team
+  _Observable__observadores: []
+_Temporada__fin: 2010-11-14
+_Temporada__gps:
+- !!python/object:model.core.GP
+  _GP__estado: finalizado
+  _GP__fin: 2010-03-14
+  _GP__inicio: 2010-03-12
+  _GP__lugar: Sakhir
+  _GP__n_vueltas_completadas: 49
+  _GP__n_vueltas_gp: 49
+  _GP__nombre: 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX
+  _GP__parrilla:
+  - &id017 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - &id002 2010-01-01
+      - *id001
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Sebastian Vettel
+  - &id015 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id003
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Felipe Massa
+  - &id014 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id003
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Fernando Alonso
+  - &id016 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id004
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Lewis Hamilton
+  - &id018 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id005
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Nico Rosberg
+  - &id021 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id001
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Mark Webber
+  - &id019 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id005
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Michael Schumacher
+  - &id020 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id004
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Jenson Button
+  - &id024 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id006
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Robert Kubica
+  - &id025 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id007
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Adrian Sutil
+  - &id023 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id008
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Rubens Barrichello
+  - &id022 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id007
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Vitantonio Liuzzi
+  - &id027 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id008
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Nico Hulkenberg
+  - &id031 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id009
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Pedro De la Rosa
+  - &id029 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id010
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Sebastien Buemi
+  - &id035 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id009
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Kamui Kobayashi
+  - &id034 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id006
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Vitaly Petrov
+  - &id026 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id010
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Jaime Alguersuari
+  - &id033 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id011
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Timo Glock
+  - &id030 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id012
+    - !!python/tuple
+      - 2010-03-19
+      - *id011
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Jarno Trulli
+  - &id028 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id012
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Heikki Kovalainen
+  - &id036 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id011
+    - !!python/tuple
+      - 2010-03-19
+      - *id012
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Lucas di Grassi
+  - &id032 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id013
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Bruno Senna
+  - &id037 !!python/object:model.core.Piloto
+    _Observable__observadores: []
+    _Piloto__equipos:
+    - !!python/tuple
+      - *id002
+      - *id013
+    _Piloto__foto: null
+    _Piloto__nacimiento: null
+    _Piloto__nombre: Karun Chandhok
+  _GP__resultado:
+  - *id014
+  - *id015
+  - *id016
+  - *id017
+  - *id018
+  - *id019
+  - *id020
+  - *id021
+  - *id022
+  - *id023
+  - *id024
+  - *id025
+  - *id026
+  - *id027
+  - *id028
+  - *id029
+  - *id030
+  - *id031
+  - *id032
+  - *id033
+  - *id034
+  - *id035
+  - *id036
+  - *id037
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: finalizado
+  _GP__fin: 2010-03-28
+  _GP__inicio: 2010-03-26
+  _GP__lugar: Melbourne
+  _GP__n_vueltas_completadas: 49
+  _GP__n_vueltas_gp: 58
+  _GP__nombre: 2010 FORMULA 1 QANTAS AUSTRALIAN GRAND PRIX
+  _GP__parrilla:
+  - *id024
+  - *id015
+  - *id025
+  - *id016
+  - *id018
+  - *id021
+  - *id019
+  - *id020
+  - *id014
+  - *id017
+  - *id023
+  - *id022
+  - *id027
+  - *id031
+  - *id029
+  - *id035
+  - *id034
+  - *id026
+  - *id033
+  - *id030
+  - *id028
+  - *id036
+  - *id032
+  - *id037
+  _GP__resultado:
+  - *id014
+  - *id015
+  - *id016
+  - *id017
+  - *id018
+  - *id019
+  - *id020
+  - *id021
+  - *id022
+  - *id023
+  - *id024
+  - *id025
+  - *id026
+  - *id027
+  - *id028
+  - *id029
+  - *id030
+  - *id031
+  - *id032
+  - *id033
+  - *id034
+  - *id035
+  - *id036
+  - *id037
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: comenzado
+  _GP__fin: 2010-04-04
+  _GP__inicio: 2010-04-02
+  _GP__lugar: Kuala Lumpur
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 56
+  _GP__nombre: 2010 FORMULA 1 PETRONAS MALAYSIAN GRAND PRIX
+  _GP__parrilla:
+  - *id018
+  - *id017
+  - *id015
+  - *id016
+  - *id014
+  - *id021
+  - *id019
+  - *id020
+  - *id024
+  - *id025
+  - *id023
+  - *id022
+  - *id027
+  - *id031
+  - *id029
+  - *id035
+  - *id034
+  - *id026
+  - *id033
+  - *id030
+  - *id028
+  - *id036
+  - *id032
+  - *id037
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-04-18
+  _GP__inicio: 2010-04-16
+  _GP__lugar: Shanghai
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 56
+  _GP__nombre: 2010 FORMULA 1 CHINESE GRAND PRIX
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-05-09
+  _GP__inicio: 2010-05-07
+  _GP__lugar: Catalunya
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 66
+  _GP__nombre: !!python/str "FORMULA 1 GRAN PREMIO DE ESPANA TELEF\xD3NICA 2010"
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-05-16
+  _GP__inicio: 2010-05-13
+  _GP__lugar: Monte Carlo
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 78
+  _GP__nombre: FORMULA 1 GRAND PRIX DE MONACO 2010
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-05-30
+  _GP__inicio: 2010-05-28
+  _GP__lugar: Istanbul
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 58
+  _GP__nombre: 2010 FORMULA 1 TURKISH GRAND PRIX
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-06-13
+  _GP__inicio: 2010-06-11
+  _GP__lugar: Montreal
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 70
+  _GP__nombre: FORMULA 1 GRAND PRIX DU CANADA 2010
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-06-27
+  _GP__inicio: 2010-06-25
+  _GP__lugar: Valencia
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 57
+  _GP__nombre: !!python/str "2010 FORMULA 1 TELEF\xD3NICA GRAND PRIX OF EUROPE"
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-07-11
+  _GP__inicio: 2010-07-09
+  _GP__lugar: Silverstone
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 60
+  _GP__nombre: 2010 FORMULA 1 SANTANDER BRITISH GRAND PRIX
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-07-25
+  _GP__inicio: 2010-07-23
+  _GP__lugar: Hockenheim
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 67
+  _GP__nombre: FORMULA 1 GROSSER PREIS SANTANDER VON DEUTSCHLAND 2010
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-08-01
+  _GP__inicio: 2010-07-30
+  _GP__lugar: Budapest
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 70
+  _GP__nombre: FORMULA 1 MAGYAR NAGYDIJ 2010
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-08-29
+  _GP__inicio: 2010-08-27
+  _GP__lugar: Spa-Francorchamps
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 44
+  _GP__nombre: 2010 FORMULA 1 BELGIAN GRAND PRIX
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-09-12
+  _GP__inicio: 2010-09-10
+  _GP__lugar: Monza
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 53
+  _GP__nombre: FORMULA 1 GRAN PREMIO SANTANDER D'ITALIA 2010
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-09-26
+  _GP__inicio: 2010-09-24
+  _GP__lugar: Singapore
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 61
+  _GP__nombre: 2010 FORMULA 1 SINGTEL SINGAPORE GRAND PRIX
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-10-10
+  _GP__inicio: 2010-10-08
+  _GP__lugar: Suzuka
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 53
+  _GP__nombre: 2010 FORMULA 1 JAPANESE GRAND PRIX
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-10-24
+  _GP__inicio: 2010-10-22
+  _GP__lugar: Yeongam
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 55
+  _GP__nombre: 2010 FORMULA 1 KOREAN GRAND PRIX
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-11-07
+  _GP__inicio: 2010-11-05
+  _GP__lugar: Sao Paulo
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 71
+  _GP__nombre: FORMULA 1 GRANDE PREMIO DO BRASIL 2010
+  _GP__temporada: *id038
+  _Observable__observadores: []
+- !!python/object:model.core.GP
+  _GP__estado: sin_comenzar
+  _GP__fin: 2010-11-14
+  _GP__inicio: 2010-11-12
+  _GP__lugar: Yas Marina Circuit
+  _GP__n_vueltas_completadas: null
+  _GP__n_vueltas_gp: 55
+  _GP__nombre: 2010 FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX
+  _GP__temporada: *id038
+  _Observable__observadores: []
+_Temporada__inicio: 2010-03-12
+_Temporada__n_pilotos_gp: 24
+_Temporada__n_pilotos_parrilla: 24
+_Temporada__nombre: Temporada 2010
+_Temporada__nombre_corto: t_2010
+_Temporada__pilotos:
+- *id017
+- *id015
+- *id014
+- *id016
+- *id018
+- *id021
+- *id019
+- *id020
+- *id024
+- *id025
+- *id023
+- *id022
+- *id027
+- *id031
+- *id029
+- *id035
+- *id034
+- *id026
+- *id033
+- *id030
+- *id028
+- *id036
+- *id032
+- *id037
+_Temporada__tabla_puntos: [25, 18, 15, 12, 10, 8, 6, 4, 1]

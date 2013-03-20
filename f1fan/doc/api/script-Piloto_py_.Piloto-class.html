@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>script-Piloto_py_.Piloto</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="script-Piloto_py_-module.html">Script&nbsp;Piloto_py_</a> ::
+        Class&nbsp;Piloto
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="script-Piloto_py_.Piloto-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Piloto</h1><p class="nomargin-top"></p>
+<pre class="base-tree">
+util.Obervable --+
+                 |
+                <strong class="uidshort">Piloto</strong>
+</pre>
+
+<hr />
+<p>Los objetos de la clase Piloto se utilizan para representar a los 
+  distintos pilotos que participan en la competici&#243;n.</p>
+  <p>Algunos de sus datos relevantes son el nombre y la fecha de 
+  nacimiento. Opcionalmente puede estar disponible una foto, para la cual 
+  se indica un uri que permita recuperarla la imagen.</p>
+  <p>Durante una temporada, un piloto puede cambiar de equipo, por lo que 
+  se mantiene la referencia a todos los equipos a los que estuvo vinculado,
+  junto con la fecha de inicio de la relaci&#243;n.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nombre</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-Piloto_py_.Piloto-class.html#nuevo_equipo" class="summary-sig-name">nuevo_equipo</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">equipo</span>,
+        <span class="summary-sig-arg">desde</span>)</span><br />
+      Vincula al piloto a un nuevo equipo a partir de la fecha indicada.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-Piloto_py_.Piloto-class.html#eliminar_relacion" class="summary-sig-name">eliminar_relacion</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">equipo</span>,
+        <span class="summary-sig-arg">fecha</span>)</span><br />
+      Permite eliminar la vinculaci&#243;n establecida entre el piloto y el 
+      equipo en la fecha dada.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code class="link">Equipo</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-Piloto_py_.Piloto-class.html#obtener_equipo" class="summary-sig-name">obtener_equipo</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fecha</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Recupera el equipo al que se encontraba vinculado el piloto en la 
+      fecha indicada, si existe.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-Piloto_py_.Piloto-class.html#estuvo_en_equipo" class="summary-sig-name">estuvo_en_equipo</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">equipo</span>,
+        <span class="summary-sig-arg">periodo</span>)</span><br />
+      Determina si el piloto est&#225; o estuvo vinculado al equipo en alg&#250;n 
+      momento del per&#237;odo comprendido entre las fechas dadas.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">dict</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-Piloto_py_.Piloto-class.html#obtener_datos" class="summary-sig-name">obtener_datos</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Recupera los datos relevantes del piloto.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="script-Piloto_py_.Piloto-class.html#establecer_datos" class="summary-sig-name">establecer_datos</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">datos</span>)</span><br />
+      Actualiza los siguientes datos del piloto: nombre, fecha de 
+      nacimiento y uri de la foto.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="nombre"></a><span class="summary-name">nombre</span> = <code title="property()">property()</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="nacimiento"></a><span class="summary-name">nacimiento</span> = <code title="property()">property()</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="foto"></a><span class="summary-name">foto</span> = <code title="property()">property()</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="equipos"></a><span class="summary-name">equipos</span> = <code title="property()">property()</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="nuevo_equipo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">nuevo_equipo</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">equipo</span>,
+        <span class="sig-arg">desde</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Vincula al piloto a un nuevo equipo a partir de la fecha indicada.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>equipo</code></strong> (<code class="link">Equipo</code>) - El nuevo equipo del piloto.</li>
+        <li><strong class="pname"><code>desde</code></strong> (datetime.date) - Fecha de inicio de la relaci&#243;n.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="eliminar_relacion"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">eliminar_relacion</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">equipo</span>,
+        <span class="sig-arg">fecha</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Permite eliminar la vinculaci&#243;n establecida entre el piloto y el 
+  equipo en la fecha dada.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>equipo</code></strong> (<code class="link">Equipo</code>) - El equipo al que est&#225;/estuvo vinculado el piloto.</li>
+        <li><strong class="pname"><code>fecha</code></strong> (datetime.date) - Fecha de inicio de la relaci&#243;n.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>ValueError</strong></code> - Si no existe la relaci&#243;n con el equipo, o no comenz&#243; en la fecha 
+        indicada.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="obtener_equipo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">obtener_equipo</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fecha</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Recupera el equipo al que se encontraba vinculado el piloto en la 
+  fecha indicada, si existe.</p>
+  <p>Si no se especifica la fecha, devuelve el &#250;ltimo equipo, i.e. el 
+  equipo actual.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fecha</code></strong> (datetime.date | None) - La fecha para la que se desea conocer la vinculaci&#243;n, o None 
+          obtener el m&#225;s reciente.</li>
+    </ul></dd>
+    <dt>Returns: <code class="link">Equipo</code></dt>
+        <dd>El equipo al que se encontraba vinculado el piloto. None si 
+          ninguno.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="estuvo_en_equipo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">estuvo_en_equipo</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">equipo</span>,
+        <span class="sig-arg">periodo</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Determina si el piloto est&#225; o estuvo vinculado al equipo en alg&#250;n 
+  momento del per&#237;odo comprendido entre las fechas dadas.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>equipo</code></strong> (<code class="link">Equipo</code>) - El equipo para el que se realiza la consulta.</li>
+        <li><strong class="pname"><code>periodo</code></strong> ((datetime.date, datetime.date)) - Fechas de comienzo y fin del per&#237;odo.</li>
+    </ul></dd>
+    <dt>Returns: bool</dt>
+        <dd>True/False si el piloto se encontraba vinculado al equipo en el 
+          per&#237;odo dado.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="obtener_datos"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">obtener_datos</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Recupera los datos relevantes del piloto.</p>
+  <dl class="fields">
+    <dt>Returns: dict</dt>
+        <dd>Devuelve los datos en un diccionario con las siguientes claves: 
+          'nombre', 'nacimiento', 'foto' y 'equipos'.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="establecer_datos"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">establecer_datos</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">datos</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Actualiza los siguientes datos del piloto: nombre, fecha de nacimiento
+  y uri de la foto.</p>
+  <p>S&#243;lo se actualizan aquellos datos para los que se proporciona un 
+  valor.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>datos</code></strong> (dict) - Los datos a actualizar, en un diccionario con las siguientes 
+          claves: 'nombre', 'nacimiento', 'foto'.</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>Forbidden</strong></code> - Si el diccionario contiene alguna clave invalida.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Mar 14 12:11:03 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

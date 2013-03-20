@@ -1,0 +1,54 @@
+General:
+#    renombrar las variables y metodos que solo seran privados
+-   archivo de configuracion? igual para guadar el directorio de la bd o alguna opcion
+#   comprobar que se este siguiendo algun modelo
+-   crear los dialogos a pelo para ahorrar memoria y no tener varios dialogos abiertos antes y escondidos
+#    añadir soporte para cuando no hay ninguna temporada en la bd
+#    mostrar que no hay ninguna temporada en editar piloto, gp y equipo
+#   añadir al menu introducir resultados, editar temporada...
+-   añadir al menu un enlace al manual
+    eliminar dbs de prueba
+
+Consultar resultados:
+#    hacer que el treeview haga scroll (copiandolo de introducir resultados)
+#    diferencial los listview de la clasificacion de pilotos y equipos para mostrar correctamente el nombre de as columnas
+#    arreglar bug en el scroll de la clasificacion de pilotos
+#    no mostrar nada activo en los checkboxes si no hay nada que mostrar
+#    añadir lista de grandes premios de la temporada
+
+Introducir resultados:
+#    si no quedan grandes premios por mostrar, mostrar un diálogo
+#    limpiar (eliminar variables, utilizar funciones para obtener datos..)
+#    comprobar que no se este actualizando demasiadas veces (ahora con hacerlo cada vez que se muestre la pagina deberia llegar)
+#    Definir lo que hacen los botones guardar/atras/cancelar:
+#        con guardar se podría guardar y cargar un nuevo gran premio, o la carrera si se está editando la clasificación...
+#        con atras/cancelar se vuelve a la pantalla principal
+#    mostrar mensaje al guardar
+#    permitir guardar menos pilotos del maximo
+#    eliminar el gp de la lista de validos despues de haber finalizado la carrera. ahora no elimina el que deberia
+#    arreglar la seleccion de la temporada activa y su lista de gps
+
+    
+ Mantenimiento / Modificar Temporada:
+#   arreglar fechas (muestra un mes menos de la realidad) (creo que ya esta bien, comprobar que se guarda la fecha correcta)
+#    al pulsar limpiar, recargar los datos originales de la temporada o hacer comprobaciones para ver si es una temporada existente o una nueva
+#    ver para que sirve la lista de pilotos clasificados
+#   realizar las acciones de guardado y borrado de los dialogos
+-   comprobar si hay cambios antes de mostrar el dialogo de cancelar
+-   mostrar un dialogo si se pulsa un boton sin haber nada seleccionado
+#    hacer las ventanas de puntuacion, participantes...
+#    arreglar que se autoactualice la posicion
+#    hacer guardar regla
+
+ Mantenimiento / Modificar GP
+#    confirmar que guarda y borra despues de que arreglen el bug
+#   crear dialogo para cuando no se han establecido las reglas de la temporada
+#   mirar si hacen falta mas dialogos
+#   recargar datos al guardar, cancelar y borrar... (comprobar que se recargan bien despues de arreglar el bug)
+#   hacer boton de borrar
+
+ Mantenimiento / Modificar Piloto
+#   confirmar que guarda y borra despues de que arreglen el bug
+#   añadir calculo de la fecha fin o eliminar la columna
+#   actualizar botones al grabar un piloto
+#   arreglar error al cambiar nombre (creo que es por la fecha de nacimiento)

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>model.Facade</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;model ::
+        Module&nbsp;Facade
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="model.Facade-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="model.Facade-module.html">Module model.Facade</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">Interface Fachada del subsistema que contiene el modelo de la aplicaci&#243;n::</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">    from model import Facade</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-name">__all__</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt class="py-string">'establecer_directorio_bd'</tt><tt class="py-op">,</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">            <tt class="py-string">'obtener_temporada'</tt><tt class="py-op">,</tt> <tt class="py-string">'almacenar_temporada'</tt><tt class="py-op">,</tt> <tt class="py-string">'eliminar_temporada'</tt><tt class="py-op">,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line">            <tt class="py-string">'obtener_lista_temporadas'</tt><tt class="py-op">,</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line">            <tt class="py-string">'nueva_temporada'</tt><tt class="py-op">,</tt> <tt class="py-string">'nuevo_GP'</tt><tt class="py-op">,</tt> <tt class="py-string">'nuevo_equipo'</tt><tt class="py-op">,</tt> <tt class="py-string">'nuevo_piloto'</tt><tt class="py-op">]</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">model</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">model</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Module model.core=model.core-module.html"><a title="model.core" class="py-name" href="#" onclick="return doclink('link-0', 'core', 'link-0');">core</a></tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">yaml</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">datetime</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable model.Facade._bd_path=model.Facade-module.html#_bd_path"><a title="model.Facade._bd_path" class="py-name" href="#" onclick="return doclink('link-1', '_bd_path', 'link-1');">_bd_path</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"."</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable model.Facade._temporadas=model.Facade-module.html#_temporadas"><a title="model.Facade._temporadas" class="py-name" href="#" onclick="return doclink('link-2', '_temporadas', 'link-2');">_temporadas</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="establecer_directorio_bd"></a><div id="establecer_directorio_bd-def"><a name="L25"></a><tt class="py-lineno"> 25</tt> <a class="py-toggle" href="#" id="establecer_directorio_bd-toggle" onclick="return toggle('establecer_directorio_bd');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Facade-module.html#establecer_directorio_bd">establecer_directorio_bd</a><tt class="py-op">(</tt><tt class="py-param">path</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="establecer_directorio_bd-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="establecer_directorio_bd-expanded"><a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">    Configura el directorio en que se encuentran los ficheros yaml que</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">    conforman la BBDD de la aplicaci&#243;n.</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">    @param path: path al directorio.</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">    @type path: string</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">    <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">stat</tt><tt class="py-op">(</tt><tt class="py-name">path</tt><tt class="py-op">)</tt> <tt class="py-comment"># comprobamos que es posible acceder al directorio</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">    <tt id="link-3" class="py-name"><a title="model.Facade._bd_path" class="py-name" href="#" onclick="return doclink('link-3', '_bd_path', 'link-1');">_bd_path</a></tt> <tt class="py-op">=</tt> <tt class="py-name">path</tt> </tt>
+</div><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="obtener_lista_temporadas"></a><div id="obtener_lista_temporadas-def"><a name="L35"></a><tt class="py-lineno"> 35</tt> <a class="py-toggle" href="#" id="obtener_lista_temporadas-toggle" onclick="return toggle('obtener_lista_temporadas');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Facade-module.html#obtener_lista_temporadas">obtener_lista_temporadas</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="obtener_lista_temporadas-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="obtener_lista_temporadas-expanded"><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">    Devuelve una lista con los nombres cortos de todas las temporadas</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">    almacenadas en la BBDD.</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">    @return: Lista de nombres cortos de temporadas.</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">    @rtype: [String]</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-docstring">    @note: La BBDD est&#225; formada por los ficheros yaml en el directorio</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-docstring">    correspondiente</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-docstring">    @see: L{Facade.establecer_directorio_bd}</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">    @raises IOError: Si ocurre alg&#250;n error en el sistema de ficheros</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-docstring">    al acceder a la BBDD.</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">    <tt class="py-name">files</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">listdir</tt><tt class="py-op">(</tt><tt id="link-4" class="py-name"><a title="model.Facade._bd_path" class="py-name" href="#" onclick="return doclink('link-4', '_bd_path', 'link-1');">_bd_path</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">[</tt> <tt class="py-name">filename</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">5</tt><tt class="py-op">]</tt> <tt class="py-keyword">for</tt> <tt class="py-name">filename</tt> <tt class="py-keyword">in</tt> <tt class="py-name">files</tt> <tt class="py-keyword">if</tt> <tt class="py-name">filename</tt><tt class="py-op">.</tt><tt class="py-name">lower</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">endswith</tt><tt class="py-op">(</tt><tt class="py-string">".yaml"</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="obtener_temporada"></a><div id="obtener_temporada-def"><a name="L53"></a><tt class="py-lineno"> 53</tt> <a class="py-toggle" href="#" id="obtener_temporada-toggle" onclick="return toggle('obtener_temporada');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Facade-module.html#obtener_temporada">obtener_temporada</a><tt class="py-op">(</tt><tt class="py-param">nombre_corto</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="obtener_temporada-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="obtener_temporada-expanded"><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">    Devuelve el objeto correspondiente a la temporada cuyo nombre</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-docstring">    corto se especifica. Si el objeto no se encuentra en memoria, se</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">    recupera de la BBDD. Al recuperar una temporada, tambi&#233;n se</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">    recuperan todos los objetos relacionados.</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring">    @param nombre_corto: El nombre corto de la temporada. @see{nueva_temporada}.</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">    @type nombre_corto: String</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">    @return: El objeto temporada correspondiente.</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">    @rtype: L{Temporada}</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring">    @raises IOError: Si ocurre alg&#250;n error en el sistema de ficheros</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">    al acceder a la BBDD.</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-5" class="py-name" targets="Variable model.core.Temporada.nombre_corto=model.core.Temporada-class.html#nombre_corto"><a title="model.core.Temporada.nombre_corto" class="py-name" href="#" onclick="return doclink('link-5', 'nombre_corto', 'link-5');">nombre_corto</a></tt> <tt class="py-keyword">in</tt> <tt id="link-6" class="py-name"><a title="model.Facade._temporadas" class="py-name" href="#" onclick="return doclink('link-6', '_temporadas', 'link-2');">_temporadas</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-7" class="py-name"><a title="model.Facade._temporadas" class="py-name" href="#" onclick="return doclink('link-7', '_temporadas', 'link-2');">_temporadas</a></tt><tt class="py-op">[</tt><tt id="link-8" class="py-name"><a title="model.core.Temporada.nombre_corto" class="py-name" href="#" onclick="return doclink('link-8', 'nombre_corto', 'link-5');">nombre_corto</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">    <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-9" class="py-name"><a title="model.Facade._bd_path" class="py-name" href="#" onclick="return doclink('link-9', '_bd_path', 'link-1');">_bd_path</a></tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name"><a title="model.core.Temporada.nombre_corto" class="py-name" href="#" onclick="return doclink('link-10', 'nombre_corto', 'link-5');">nombre_corto</a></tt><tt class="py-op">+</tt><tt class="py-string">".yaml"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">'r'</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">    <tt id="link-11" class="py-name" targets="Variable model.core.GP.temporada=model.core.GP-class.html#temporada"><a title="model.core.GP.temporada" class="py-name" href="#" onclick="return doclink('link-11', 'temporada', 'link-11');">temporada</a></tt> <tt class="py-op">=</tt> <tt class="py-name">yaml</tt><tt class="py-op">.</tt><tt class="py-name">load</tt><tt class="py-op">(</tt><tt class="py-name">f</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">    <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">close</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">    <tt id="link-12" class="py-name"><a title="model.Facade._temporadas" class="py-name" href="#" onclick="return doclink('link-12', '_temporadas', 'link-2');">_temporadas</a></tt><tt class="py-op">[</tt><tt id="link-13" class="py-name"><a title="model.core.Temporada.nombre_corto" class="py-name" href="#" onclick="return doclink('link-13', 'nombre_corto', 'link-5');">nombre_corto</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="model.core.GP.temporada" class="py-name" href="#" onclick="return doclink('link-14', 'temporada', 'link-11');">temporada</a></tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-15" class="py-name"><a title="model.core.GP.temporada" class="py-name" href="#" onclick="return doclink('link-15', 'temporada', 'link-11');">temporada</a></tt> </tt>
+</div><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"> </tt>
+<a name="almacenar_temporada"></a><div id="almacenar_temporada-def"><a name="L76"></a><tt class="py-lineno"> 76</tt> <a class="py-toggle" href="#" id="almacenar_temporada-toggle" onclick="return toggle('almacenar_temporada');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Facade-module.html#almacenar_temporada">almacenar_temporada</a><tt class="py-op">(</tt><tt class="py-param">temporada</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="almacenar_temporada-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="almacenar_temporada-expanded"><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">    Se almacena en la BBDD el objeto temporada y todos los objetos</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">    relacionados con &#233;l.</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">    @param temporada: El objeto temporada a alamacenar.</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">    @type temporada: L{Temporada}</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">    @note: El objeto temporada debe tener un nombre_corto v&#225;lido</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">    @see{nueva_temporada}</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">    @raises IOError: Si ocurre alg&#250;n error en el sistema de ficheros</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring">    al acceder a la BBDD.</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">    <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="model.Facade._bd_path" class="py-name" href="#" onclick="return doclink('link-16', '_bd_path', 'link-1');">_bd_path</a></tt><tt class="py-op">,</tt> <tt id="link-17" class="py-name"><a title="model.core.GP.temporada" class="py-name" href="#" onclick="return doclink('link-17', 'temporada', 'link-11');">temporada</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method model.core.Temporada.obtener_nombre_corto()=model.core.Temporada-class.html#obtener_nombre_corto"><a title="model.core.Temporada.obtener_nombre_corto" class="py-name" href="#" onclick="return doclink('link-18', 'obtener_nombre_corto', 'link-18');">obtener_nombre_corto</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-string">".yaml"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">'w'</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-name">yaml</tt><tt class="py-op">.</tt><tt class="py-name">dump</tt><tt class="py-op">(</tt><tt id="link-19" class="py-name"><a title="model.core.GP.temporada" class="py-name" href="#" onclick="return doclink('link-19', 'temporada', 'link-11');">temporada</a></tt><tt class="py-op">,</tt> <tt class="py-name">f</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">    <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">close</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="eliminar_temporada"></a><div id="eliminar_temporada-def"><a name="L95"></a><tt class="py-lineno"> 95</tt> <a class="py-toggle" href="#" id="eliminar_temporada-toggle" onclick="return toggle('eliminar_temporada');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Facade-module.html#eliminar_temporada">eliminar_temporada</a><tt class="py-op">(</tt><tt class="py-param">temporada</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="eliminar_temporada-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="eliminar_temporada-expanded"><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">    Elimina de la BBDD la temporada y todos los objetos (GP, Piloto,</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">    Equipo) asociados a esa temporada.</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">    @param temporada: El objeto Temporada que se eliminar&#225;.</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">    @type temporada: L{Temporada}</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">    @raises IOError: Si ocurre alg&#250;n error en el sistema de ficheros</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">    al acceder a la BBDD.</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt id="link-20" class="py-name" targets="Variable model.core.Equipo.nombre=model.core.Equipo-class.html#nombre,Variable model.core.GP.nombre=model.core.GP-class.html#nombre,Variable model.core.Piloto.nombre=model.core.Piloto-class.html#nombre,Variable model.core.Temporada.nombre=model.core.Temporada-class.html#nombre"><a title="model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-20', 'nombre', 'link-20');">nombre</a></tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name"><a title="model.core.GP.temporada" class="py-name" href="#" onclick="return doclink('link-21', 'temporada', 'link-11');">temporada</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="model.core.Temporada.obtener_nombre_corto" class="py-name" href="#" onclick="return doclink('link-22', 'obtener_nombre_corto', 'link-18');">obtener_nombre_corto</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-23" class="py-name"><a title="model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-23', 'nombre', 'link-20');">nombre</a></tt> <tt class="py-keyword">in</tt> <tt id="link-24" class="py-name"><a title="model.Facade._temporadas" class="py-name" href="#" onclick="return doclink('link-24', '_temporadas', 'link-2');">_temporadas</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-keyword">del</tt> <tt id="link-25" class="py-name"><a title="model.Facade._temporadas" class="py-name" href="#" onclick="return doclink('link-25', '_temporadas', 'link-2');">_temporadas</a></tt><tt class="py-op">[</tt><tt id="link-26" class="py-name"><a title="model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-26', 'nombre', 'link-20');">nombre</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">    <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-27" class="py-name"><a title="model.Facade._bd_path" class="py-name" href="#" onclick="return doclink('link-27', '_bd_path', 'link-1');">_bd_path</a></tt><tt class="py-op">,</tt> <tt id="link-28" class="py-name"><a title="model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-28', 'nombre', 'link-20');">nombre</a></tt> <tt class="py-op">+</tt> <tt class="py-string">".yaml"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"> </tt>
+<a name="nueva_temporada"></a><div id="nueva_temporada-def"><a name="L111"></a><tt class="py-lineno">111</tt> <a class="py-toggle" href="#" id="nueva_temporada-toggle" onclick="return toggle('nueva_temporada');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Facade-module.html#nueva_temporada">nueva_temporada</a><tt class="py-op">(</tt><tt class="py-param">nombre</tt><tt class="py-op">,</tt> <tt class="py-param">nombre_corto</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="nueva_temporada-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="nueva_temporada-expanded"><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring">    Crea una nueva temporada. Devuelve el correspondiente objeto de</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">    tipo L{Temporada}.</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">    @param nombre: El nombre de la temporada.</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring">    @type nombre: String</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">    @param nombre_corto: El nombre corto de la temporada. El nombre</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-docstring">    corto s&#243;lo puede contener los caracteres convencionales de un</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-docstring">    identificador (letras, n&#250;meros, subrayado, ...)</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-docstring">    @type nombre_corto: String</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">    @return: El objeto temporada correspondiente.</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">    @rtype: L{Temporada}</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">    <tt id="link-29" class="py-name"><a title="model.core.GP.temporada" class="py-name" href="#" onclick="return doclink('link-29', 'temporada', 'link-11');">temporada</a></tt> <tt class="py-op">=</tt> <tt class="py-name">model</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="model.core" class="py-name" href="#" onclick="return doclink('link-30', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Class model.core.Temporada=model.core.Temporada-class.html"><a title="model.core.Temporada" class="py-name" href="#" onclick="return doclink('link-31', 'Temporada', 'link-31');">Temporada</a></tt><tt class="py-op">(</tt><tt id="link-32" class="py-name"><a title="model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-32', 'nombre', 'link-20');">nombre</a></tt><tt class="py-op">,</tt> <tt id="link-33" class="py-name"><a title="model.core.Temporada.nombre_corto" class="py-name" href="#" onclick="return doclink('link-33', 'nombre_corto', 'link-5');">nombre_corto</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">    <tt id="link-34" class="py-name"><a title="model.Facade._temporadas" class="py-name" href="#" onclick="return doclink('link-34', '_temporadas', 'link-2');">_temporadas</a></tt><tt class="py-op">[</tt><tt id="link-35" class="py-name"><a title="model.core.Temporada.nombre_corto" class="py-name" href="#" onclick="return doclink('link-35', 'nombre_corto', 'link-5');">nombre_corto</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-36" class="py-name"><a title="model.core.GP.temporada" class="py-name" href="#" onclick="return doclink('link-36', 'temporada', 'link-11');">temporada</a></tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-37" class="py-name"><a title="model.core.GP.temporada" class="py-name" href="#" onclick="return doclink('link-37', 'temporada', 'link-11');">temporada</a></tt> </tt>
+</div><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="nuevo_GP"></a><div id="nuevo_GP-def"><a name="L129"></a><tt class="py-lineno">129</tt> <a class="py-toggle" href="#" id="nuevo_GP-toggle" onclick="return toggle('nuevo_GP');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Facade-module.html#nuevo_GP">nuevo_GP</a><tt class="py-op">(</tt><tt class="py-param">nombre</tt><tt class="py-op">,</tt> <tt class="py-param">lugar</tt><tt class="py-op">,</tt> <tt class="py-param">inicio</tt><tt class="py-op">,</tt> <tt class="py-param">fin</tt><tt class="py-op">,</tt> <tt class="py-param">num_vueltas</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="nuevo_GP-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="nuevo_GP-expanded"><a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-docstring">    Crea un nuevo Gran Premio. Devuelve el correspondiente objeto de</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">    tipo L{GP}.</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-docstring">    @param nombre: El nombre del Gran Premio.</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-docstring">    @type nombre: String</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-docstring">    @param lugar: Nombre del lugar donde se celebra el GP.</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-docstring">    @type lugar: String</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-docstring">    @param inicio: Fecha de inicio del GP.</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-docstring">    @type inicio: datetime.date</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-docstring">    @param fin: Fecha de finalizaci&#243;n del GP.</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"><tt class="py-docstring">    @type fin: datetime.date</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"><tt class="py-docstring">    @param num_vueltas: El n&#186; de vueltas del GP.</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-docstring">    @type num_vueltas: int</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-docstring">    @return: El nuevo objeto GP.</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-docstring">    @rtype: L{GP}</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">model</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="model.core" class="py-name" href="#" onclick="return doclink('link-38', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Class model.core.GP=model.core.GP-class.html"><a title="model.core.GP" class="py-name" href="#" onclick="return doclink('link-39', 'GP', 'link-39');">GP</a></tt><tt class="py-op">(</tt><tt id="link-40" class="py-name"><a title="model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-40', 'nombre', 'link-20');">nombre</a></tt><tt class="py-op">,</tt> <tt id="link-41" class="py-name" targets="Variable model.core.GP.lugar=model.core.GP-class.html#lugar"><a title="model.core.GP.lugar" class="py-name" href="#" onclick="return doclink('link-41', 'lugar', 'link-41');">lugar</a></tt><tt class="py-op">,</tt> <tt id="link-42" class="py-name" targets="Variable model.core.Equipo.inicio=model.core.Equipo-class.html#inicio,Variable model.core.GP.inicio=model.core.GP-class.html#inicio,Variable model.core.Temporada.inicio=model.core.Temporada-class.html#inicio"><a title="model.core.Equipo.inicio
+model.core.GP.inicio
+model.core.Temporada.inicio" class="py-name" href="#" onclick="return doclink('link-42', 'inicio', 'link-42');">inicio</a></tt><tt class="py-op">,</tt> <tt id="link-43" class="py-name" targets="Variable model.core.Equipo.fin=model.core.Equipo-class.html#fin,Variable model.core.GP.fin=model.core.GP-class.html#fin,Variable model.core.Temporada.fin=model.core.Temporada-class.html#fin"><a title="model.core.Equipo.fin
+model.core.GP.fin
+model.core.Temporada.fin" class="py-name" href="#" onclick="return doclink('link-43', 'fin', 'link-43');">fin</a></tt><tt class="py-op">,</tt> <tt class="py-name">num_vueltas</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"> </tt>
+<a name="nuevo_equipo"></a><div id="nuevo_equipo-def"><a name="L149"></a><tt class="py-lineno">149</tt> <a class="py-toggle" href="#" id="nuevo_equipo-toggle" onclick="return toggle('nuevo_equipo');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Facade-module.html#nuevo_equipo">nuevo_equipo</a><tt class="py-op">(</tt><tt class="py-param">nombre</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="nuevo_equipo-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="nuevo_equipo-expanded"><a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"><tt class="py-docstring">    Crea un nuevo equipo. Devuelve el correspondiente objeto de</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"><tt class="py-docstring">    tipo L{Equipo}.</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"><tt class="py-docstring">    @param nombre: El nombre del equipo.</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"><tt class="py-docstring">    @type nombre: String</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"><tt class="py-docstring">    @return: El objeto Equipo correspondiente.</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"><tt class="py-docstring">    @rtype: L{Equipo}</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">model</tt><tt class="py-op">.</tt><tt id="link-44" class="py-name"><a title="model.core" class="py-name" href="#" onclick="return doclink('link-44', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-45" class="py-name" targets="Class model.core.Equipo=model.core.Equipo-class.html"><a title="model.core.Equipo" class="py-name" href="#" onclick="return doclink('link-45', 'Equipo', 'link-45');">Equipo</a></tt><tt class="py-op">(</tt><tt id="link-46" class="py-name"><a title="model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-46', 'nombre', 'link-20');">nombre</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"> </tt>
+<a name="nuevo_piloto"></a><div id="nuevo_piloto-def"><a name="L161"></a><tt class="py-lineno">161</tt> <a class="py-toggle" href="#" id="nuevo_piloto-toggle" onclick="return toggle('nuevo_piloto');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="model.Facade-module.html#nuevo_piloto">nuevo_piloto</a><tt class="py-op">(</tt><tt class="py-param">nombre</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="nuevo_piloto-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="nuevo_piloto-expanded"><a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"><tt class="py-docstring">    Crea un nuevo piloto. Devuelve el correspondiente objeto de</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"><tt class="py-docstring">    tipo L{Piloto}.</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"><tt class="py-docstring">    @param nombre: El nombre del piloto.</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"><tt class="py-docstring">    @type nombre: String</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line"><tt class="py-docstring">    @return: El objeto Piloto correspondiente.</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-docstring">    @rtype: L{Piloto}</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">model</tt><tt class="py-op">.</tt><tt id="link-47" class="py-name"><a title="model.core" class="py-name" href="#" onclick="return doclink('link-47', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-48" class="py-name" targets="Class model.core.Piloto=model.core.Piloto-class.html"><a title="model.core.Piloto" class="py-name" href="#" onclick="return doclink('link-48', 'Piloto', 'link-48');">Piloto</a></tt><tt class="py-op">(</tt><tt id="link-49" class="py-name"><a title="model.core.Equipo.nombre
+model.core.GP.nombre
+model.core.Piloto.nombre
+model.core.Temporada.nombre" class="py-name" href="#" onclick="return doclink('link-49', 'nombre', 'link-20');">nombre</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Mar 15 03:19:48 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
