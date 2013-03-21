@@ -5,4 +5,4 @@ pyF1 allows us to create and read a database containing the pilots and their tea
 
 Developed in python2 and gtk+2 using Netbeans and Glade.
 
-Some mockups, diagrams and documentation is included.
+Some mockups, diagrams and documentation are included.
