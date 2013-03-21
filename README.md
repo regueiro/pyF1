@@ -7,5 +7,7 @@ Developed in python2 and gtk+2 using Netbeans and Glade.
 
 Some mockups, diagrams and documentation are included.
 
+---
+pyF1 &copy; 2010 Santiago Regueiro & Leandro Regueiro.
 
-(C) 2010 Santiago Regueiro & Leandro Regueiro
+f1fan model &copy; 2010 UDC.
